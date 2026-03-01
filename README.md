@@ -1,3 +1,12 @@
+---
+title: NeuroScanAI
+emoji: 🧠
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+app_file: app.py
+pinned: false
+---
 # 🧠 CT Scan Image Denoising & Brain Tumor Analysis  
 
 ## 📖 Introduction  

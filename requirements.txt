@@ -1,8 +1,4 @@
-Flask
-pydicom
-werkzeug
 tensorflow
 numpy
 opencv-python
-
-gunicorn==21.2.0
+gradio
