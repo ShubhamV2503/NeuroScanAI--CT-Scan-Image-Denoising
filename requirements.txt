@@ -5,3 +5,4 @@ tensorflow
 numpy
 opencv-python
 
+gunicorn==21.2.0
