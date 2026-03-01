@@ -13,9 +13,9 @@ pinned: false
 This project focuses on **enhancing brain CT scans** by reducing acquisition noise using a **CNN-based autoencoder**, followed by **tumor detection** on the refined images.  
 
 The workflow ensures that critical anatomical details are preserved while improving diagnostic accuracy.  
-A lightweight **Flask web app** allows clinicians or researchers to upload CT scans (`.dcm` format) and instantly visualize denoised results along with tumor classification.  
+A lightning-fast **Gradio web application** allows clinicians or researchers to instantly upload their CT scans (`.jpg`, `.png`, `.dcm` format), visualize denoised results side-by-side, and analyze the resulting improvements in Signal-to-Noise Ratio (SNR).
 
-Deployed seamlessly on **AWS EC2** (remote access via PuTTY).  
+🚀 **Live Deployment**: Seamlessly available for free and direct public access on **Hugging Face Spaces**.
 
 ---
 
@@ -23,29 +23,28 @@ Deployed seamlessly on **AWS EC2** (remote access via PuTTY).
 
 ```plaintext
 CT-Image-Denoising/
-├── models/             # Saved deep learning models (autoencoder + classifier)
-├── static/             # Assets for the Flask frontend (CSS, images, JS)
-├── templates/          # HTML templates for UI (upload page, result page)
-├── app.py              # Core pipeline: preprocessing, inference, evaluation
+├── models/             # Saved deep learning models (autoencoder)
+├── Image/              # Example images included for quick testing
+├── app.py              # Pure Python Gradio UI + Inference Pipeline
 ├── requirements.txt    # List of Python dependencies
 └── README.md           # Documentation
 ```
 
-👉 **`app.py`** acts as the entry point — handling:  
-- DICOM loading & preprocessing  
-- Autoencoder inference (denoising)  
-- Tumor classification on denoised scans  
-- Evaluation metrics (SNR, classification report)  
-- Flask-based web serving  
+👉 **`app.py`** acts as the single entry point — handling:  
+- Interactive Image uploading via Drag and Drop
+- Image resizing and gray-scale normalization
+- Autoencoder inference for powerful artifact structure denoising
+- SNR metric & comparative improvement calculations
+- The entire frontend dashboard rendered automatically
 
 ---
 
 ## 🚀 Core Features  
 
-- 🧠 **Noise Reduction**: Autoencoder removes CT noise while retaining diagnostic details.  
-- 🩺 **Tumor Prediction**: Classifier identifies tumor presence on enhanced images.  
-- 📊 **Metrics**: Includes SNR improvement tracking & classification reports.  
-- 🌍 **Cloud Deployment**: Flask app hosted on **AWS EC2** for remote & Easy usage.  
+- 🧠 **Noise Reduction**: Custom Autoencoder directly removes CT noise while retraining critical diagnostic contours.  
+- 📊 **Metrics Analysis**: Calculates the SNR of the noisy image, the denoised image, and tracks raw improvements in dB format.
+- 🎨 **Responsive Dashboard**: Beautiful, responsive, mobile-friendly interface built dynamically using the `gradio` SDK.  
+- 🌍 **Scalable ML Deployment**: Zero-server-hassle deployment leveraging Hugging Face Spaces optimized hardware.  
 
 ---
 
@@ -64,28 +63,20 @@ CT-Image-Denoising/
 
 ---
 
-## 🖼️ Visual Results  
+## ⚡ Getting Started Locally  
 
-### 🔹 CT Denoising Example  
-_Noise vs. Enhanced Image_  
-![Denoising Example](static/Picture1.png)  
+If you wish to clone this repository and run the UI yourself:
 
----
-
-## ⚡ Getting Started  
-
-### 🔧 Local Setup  
-
-1. Clone the repo & install dependencies:  
+1. Clone the repo & install dependencies via `pip`:  
    ```bash
    pip install -r requirements.txt
    ```  
-2. Add trained weights (`.h5` / `.pt`) into the `models/` folder.  
-3. Run the app:  
+2. Ensure you have the `models/autoencoder_noise.h5` model downloaded via Git LFS.
+3. Run the application:  
    ```bash
    python app.py
    ```  
-4. Open **http://127.0.0.1:5000/** in your browser → Upload a `.dcm` scan → View results.  
+4. The local web server will spin up on **http://127.0.0.1:7860**.
 
 ---
 
@@ -96,4 +87,4 @@ _Noise vs. Enhanced Image_
 
 ---
 
-✨ **In short:** This system transforms noisy CT scans into clinically useful images, leading to **better tumor detection and higher diagnostic confidence**.  
+✨ **In short:** This system transforms noisy CT scans into clinically useful images, leading to **better tumor detection and higher diagnostic confidence**.
