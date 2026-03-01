@@ -63,6 +63,14 @@ CT-Image-Denoising/
 
 ---
 
+## 🖼️ Visual Results  
+
+### 🔹 CT Denoising Example  
+_Noise vs. Enhanced Image_  
+![Denoising Example](static/Picture1.png)  
+
+---
+
 ## ⚡ Getting Started Locally  
 
 If you wish to clone this repository and run the UI yourself:
@@ -80,8 +88,8 @@ If you wish to clone this repository and run the UI yourself:
 
 ---
 
-## 👨‍💻 Author  & Co-Author
-📌 **Developed by:** *Shubham Vishwakarma* / *Mayank Kathane* / *Jeet Nakrani*
+## 👨‍💻 Author
+📌 **Developed by:** *Shubham Vishwakarma*
 📌 **Publication:** It has been Published in IEEE journal
 💬 Feel free to reach out for collaboration or research discussions.  
 
