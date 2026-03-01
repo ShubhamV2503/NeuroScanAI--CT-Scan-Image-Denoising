@@ -71,6 +71,8 @@ _Noise vs. Enhanced Image_
 
 ---
 
+Dataset Link: https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri 
+
 ## ⚡ Getting Started Locally  
 
 If you wish to clone this repository and run the UI yourself:
@@ -84,7 +86,7 @@ If you wish to clone this repository and run the UI yourself:
    ```bash
    python app.py
    ```  
-4. The local web server will spin up on **http://127.0.0.1:7860**.
+4. The local web server will spin up on **https://huggingface.co/spaces/rayuga2503/NeuroScanAI**.
 
 ---
 
